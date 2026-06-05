@@ -1,6 +1,4 @@
-// ============================
 // BLOQUE 1
-// ============================
 
 // 1 A
 
@@ -10,7 +8,8 @@ for (int i = 1; i <= 100; i++)
         Console.WriteLine(i);
 }
 
---- 1b ---
+// 1 B
+
 Console.Write("Ingresa tu edad: ");
 int edad = int.Parse(Console.ReadLine());
 if (edad < 18)
@@ -27,6 +26,7 @@ string palabra = Console.ReadLine();
 Console.WriteLine($"La palabra tiene {palabra.Length} letras.");
 
 // 1 D
+
 string contrasena = "secreta";
 int intentos = 0;
 while (intentos < 5)
@@ -100,6 +100,7 @@ for (int i = 1; i <= 12; i++)
     Console.WriteLine($"{num} x {i} = {num * i}");
 
 // 1 L
+
 int total = 0;
 int cantidad = 0;
 while (total <= 100)
@@ -180,9 +181,9 @@ foreach (char c in oracion)
         contA++;
 Console.WriteLine($"La oración tiene {contA} letras 'a'.");
 
-// ============================
+
+
 // MENÚ BLOQUE 1
-// ============================
 
 static void Bloque1a()
 {
@@ -386,9 +387,9 @@ static void MenuBloque1()
     }
 }
 
-// ============================
+
+
 // BLOQUE 2
-// ============================
 
 // 2 A
 
@@ -633,9 +634,9 @@ for (char c = 'Z'; c >= 'A'; c--)
     Console.Write(c + " ");
 Console.WriteLine();
 
-// ============================
+
+
 // MENÚ BLOQUE 2
-// ============================
 
 static void Bloque2a()
 {
@@ -918,14 +919,16 @@ static void MenuBloque2()
     }
 }
 
-// ============================
-// MENÚ PRINCIPAL (BLOQUES 1 Y 2)
-// ============================
+
+
+// MENÚ
 
 while (true)
 {
-    Console.WriteLine("\n=== MENÚ PRINCIPAL ===");
-    Console.WriteLine("1) Bloque 1\n2) Bloque 2\n0) Salir");
+    Console.WriteLine(" MENÚ PRINCIPAL: ");
+    Console.WriteLine("1) Bloque 1");
+    Console.WriteLine("2) Bloque 2");
+    Console.WriteLine("0) Salir");
     Console.Write("Opción: ");
     string op = Console.ReadLine();
     switch (op)
