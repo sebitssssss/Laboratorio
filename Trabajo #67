@@ -1,0 +1,371 @@
+1)
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[,] matriz = new int[2, 3];
+
+            
+            for (int fila = 0; fila < 2; fila++)
+            {
+                for (int columna = 0; columna < 3; columna++)
+                {
+                    Console.Write("Ingrese un número para [" + fila + "," + columna + "]: ");
+                    matriz[fila, columna] = Convert.ToInt16(Console.ReadLine());
+                }
+            }
+
+            
+            Console.WriteLine("\nMatriz:");
+
+            for (int fila = 0; fila < 2; fila++)
+            {
+                for (int columna = 0; columna < 3; columna++)
+                {
+                    Console.Write(matriz[fila, columna] + "\t");
+                }
+
+                Console.WriteLine();
+            }
+
+        }
+    }
+}
+2)
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[,] matriz = new int[2, 3];
+
+            
+            for (int fila = 0; fila < 2; fila++)
+            {
+                for (int columna = 0; columna < 3; columna++)
+                {
+                    Console.Write("Ingrese un número para [" + fila + "," + columna + "]: ");
+                    matriz[fila, columna] = Convert.ToInt16(Console.ReadLine());
+                    if (fila == 0)
+                    {
+                        matriz[fila, columna] = matriz[fila, columna] * 4;
+                    }
+                    if (columna == 2)
+                    {
+                        matriz[fila, columna] = matriz[fila, columna] * 3;
+                    }
+                }
+            }
+
+            Console.WriteLine("\nMatriz:");
+
+            for (int fila = 0; fila < 2; fila++)
+            {
+                for (int columna = 0; columna < 3; columna++)
+                {
+                    Console.Write(matriz[fila, columna] + "\t");
+                }
+
+                Console.WriteLine();
+            }
+
+        }
+    }
+}
+
+3)
+using System.ComponentModel.DataAnnotations;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[,] matriz = new int[2, 3];
+
+            int rejunte = 0;
+
+
+            for (int fila = 0; fila < 2; fila++)
+            {
+                for (int columna = 0; columna < 3; columna++)
+                {
+                    Console.Write("Ingrese un número para [" + fila + "," + columna + "]: ");
+                    matriz[fila, columna] = Convert.ToInt16(Console.ReadLine());
+                    if (fila == 0)
+                    {
+                        matriz[fila, columna] = matriz[fila, columna] * 4;
+                    }
+                    else if (columna == 2)
+                    {
+                        matriz[fila, columna] = matriz[fila, columna] * 3;
+                    }
+
+                    rejunte += matriz[fila, columna];
+
+
+                }
+            }
+
+            int min = matriz[0, 0];
+
+            Console.WriteLine("\nMatriz:");
+
+            for (int fila = 0; fila < 2; fila++)
+            {
+                for (int columna = 0; columna < 3; columna++)
+                {
+                    Console.Write(matriz[fila, columna] + "\t");
+
+                    if (matriz[fila, columna] < min)
+                    {
+                        min = matriz[fila, columna];
+                    }
+                }
+                Console.WriteLine("\n");
+            } 
+            Console.WriteLine("\n La sumatoria de todas las matrices es "+ rejunte);
+            Console.WriteLine("El valor mas bajo fue: " + min);
+
+        }
+    }
+}
+
+4)
+
+using System;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[,] matriz = new int[3, 12];
+            int numcoche = 36;
+            int recaudaciong = 0;
+            int recaudacionf1 = 0;
+            int recaudacionf2 = 0;
+            int recaudacionf3 = 0;
+            int recaudacionc1 = 0;
+            int recaudacionc2 = 0;
+            int recaudacionc3 = 0;
+            int recaudacionc4 = 0;
+            int recaudacionc5 = 0;
+            int recaudacionc6 = 0;
+            int recaudacionc7 = 0;
+            int recaudacionc8 = 0;
+            int recaudacionc9 = 0;
+            int recaudacionc10 = 0;
+            int recaudacionc11 = 0;
+            int recaudacionc12 = 0;
+            do
+            {
+                for (int fila = 0; fila < 3; fila++)
+                {
+                    for (int columna = 0; columna < 12; columna++)
+                    {
+                        Console.Write($"Ingrese el número recaudado del coche línea {fila + 1} unidad {columna + 1}: ");
+                        matriz[fila, columna] = Convert.ToInt16(Console.ReadLine());
+                        recaudaciong += matriz[fila, columna];
+
+                        if (fila == 0)
+                        {
+                            recaudacionf1 += matriz[fila, columna];
+
+                        }
+                        if (fila == 1)
+                        {
+                            recaudacionf2 += matriz[fila, columna];
+                        }
+                        if (fila == 2)
+                        {
+                            recaudacionf3 += matriz[fila, columna];
+                        }
+
+                        if (columna == 0)
+                        {
+                            recaudacionc1 += matriz[fila, columna];
+                        }
+                        if (columna == 1)
+                        {
+                            recaudacionc2 += matriz[fila, columna];
+                        }
+                        if (columna == 2)
+                        {
+                            recaudacionc3 += matriz[fila, columna];
+                        }
+                        if (columna == 3)
+                        {
+                            recaudacionc4 += matriz[fila, columna];
+                        }
+                        if (columna == 4)
+                        {
+                            recaudacionc5 += matriz[fila, columna];
+                        }
+                        if (columna == 5)
+                        {
+                            recaudacionc6 += matriz[fila, columna];
+                        }
+                        if (columna == 6)
+                        {
+                            recaudacionc7 += matriz[fila, columna];
+                        }
+                        if (columna == 7)
+                        {
+                            recaudacionc8 += matriz[fila, columna];
+                        }
+                        if (columna == 8)
+                        {
+                            recaudacionc9 += matriz[fila, columna];
+                        }
+                        if (columna == 9)
+                        {
+                            recaudacionc10 += matriz[fila, columna];
+                        }
+                        if (columna == 10)
+                        {
+                            recaudacionc11 += matriz[fila, columna];
+                        }
+                        if (columna == 11)
+                        {
+                            recaudacionc12 += matriz[fila, columna];
+                        }
+                    }
+                }
+                numcoche -= 1;
+
+            } while (numcoche < 1);
+
+
+            Console.WriteLine($"\nRecaudación total por línea de colectivo:");
+            Console.WriteLine($"\nRecaudación línea 1: {recaudacionf1}");
+            Console.WriteLine($"\nRecaudación línea 2: {recaudacionf2}");
+            Console.WriteLine($"\nRecaudación línea 3: {recaudacionf3}");
+
+            Console.WriteLine($"\nRecaudación total por coche: ");
+            Console.WriteLine($"\nRecaudación línea 1: {recaudacionc1}");
+            Console.WriteLine($"\nRecaudación línea 2: {recaudacionc2}");
+            Console.WriteLine($"\nRecaudación línea 3: {recaudacionc3}");
+            Console.WriteLine($"\nRecaudación línea 4: {recaudacionc4}");
+            Console.WriteLine($"\nRecaudación línea 5: {recaudacionc5}");
+            Console.WriteLine($"\nRecaudación línea 6: {recaudacionc6}");
+            Console.WriteLine($"\nRecaudación línea 7: {recaudacionc7}");
+            Console.WriteLine($"\nRecaudación línea 8: {recaudacionc8}");
+            Console.WriteLine($"\nRecaudación línea 9: {recaudacionc9}");
+            Console.WriteLine($"\nRecaudación línea 10: {recaudacionc10}");
+            Console.WriteLine($"\nRecaudación línea 11: {recaudacionc11}");
+            Console.WriteLine($"\nRecaudación línea 12: {recaudacionc12}");
+
+            Console.WriteLine($"\nRecaudación total general: {recaudaciong}");
+        }
+    }
+}
+
+5)
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string confirmation = "";
+            double[,] matriz = new double[3, 3];
+            for (int trimestre = 0; trimestre < 3; trimestre++)
+            {
+                for (int alumnos = 0; alumnos < 3; alumnos++)
+                {
+                    Console.Write($"Ingrese el valor del trimestre {trimestre + 1} y el alumno: {alumnos + 1} ");
+                    matriz[trimestre, alumnos] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            Console.WriteLine("Quiere corregir alguna nota? Y/N");
+            do
+            {
+                string opcion = Console.ReadLine();
+                if (opcion == "Y" || opcion == "y")
+                {
+                    Console.WriteLine("Ingrese el numero de legajo del estudiante");
+                    int legajo = Convert.ToInt16(Console.ReadLine());
+                    if (legajo >= 1 && legajo <= 100)
+                    {
+                        Console.WriteLine("Ingrese el trimestre a cambiar la nota");
+                        int trimestre = Convert.ToInt16(Console.ReadLine());
+                        if (trimestre >= 1 && trimestre <= 3)
+                        {
+                            Console.WriteLine("Ingrese la nueva nota");
+                            int notanueva = Convert.ToInt16(Console.ReadLine());
+                            Console.WriteLine($"La nota anterior es: {matriz[legajo - 1, trimestre - 1]}, esta seguro del cambio? (Si / No)");
+                            string confirmacion = Console.ReadLine();
+                            if (confirmacion == "Si")
+                            {
+                                matriz[trimestre - 1, legajo - 1] = notanueva;
+                            }
+
+                            Console.WriteLine("Desea continuar?");
+                            confirmation = Console.ReadLine();
+
+                            if (confirmation != "Si")
+                            {
+                                Console.WriteLine("N legajo" + "   1er bim" + "   2do bim" + "   3er bim" + "   Promedio");
+                                for (int alumnos = 0; alumnos < 3; alumnos++)
+                                {
+                                    Console.Write($"    {alumnos + 1}          {matriz[0, alumnos]}       {matriz[1, alumnos]}         {matriz[2, alumnos]}           ");
+                                    double promedio = ((matriz[0, alumnos] + matriz[1, alumnos] + matriz[2, alumnos]) / 3);
+                                    Console.WriteLine(promedio);
+                                }
+                            }
+                        }
+                        else { Console.WriteLine("Error"); }
+                    }
+                    else { Console.WriteLine("Error"); }
+                }
+                else { Console.WriteLine("Error"); }
+            } while (confirmation == "Si");
+        }
+    }
+} 
+
+6)
+using System;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[,] hotel = new int[2, 6];
+            int total = 0;
+
+            for (int piso = 0; piso < 2; piso++)
+            {
+                for (int depto = 0; depto < 6; depto++)
+                {
+                    Console.Write($"Ingrese la cantidad de habitantes en el piso {piso + 1}, departamento {depto + 1}: ");
+                    hotel[piso, depto] = Convert.ToInt16(Console.ReadLine());
+                    total += hotel[piso, depto];
+                }
+
+            }
+
+            Console.WriteLine($"El total de habitantes en el hotel es de: {total}");
+
+            for (int piso = 0; piso < 2; piso++)
+            {
+                int prom = 0;
+                for (int depto = 0; depto < 6; depto++)
+                {
+                    prom += hotel[piso, depto];
+                }
+
+                Console.WriteLine($"El promedio del piso {piso + 1} es: {prom / 6} ");
+
+            }
+        }
+    }
+}
